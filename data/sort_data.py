@@ -8,7 +8,7 @@ here = path.dirname(__file__)
 
 df = pd.read_csv(
     path.join(here, './_capstone.tsv'),
-    sep=r'\s*\t\s*',
+    sep='\t',
     engine='python',
     decimal=r',',
     quotechar=r'"',
