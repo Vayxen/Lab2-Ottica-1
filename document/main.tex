@@ -1,0 +1,41 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry} % manage page dimensions
+\usepackage[utf8]{inputenc} % utf-8 encoding
+\usepackage[italian]{babel} % italian default text
+
+\usepackage{import} % import other .tex files
+\usepackage[hidelinks]{hyperref} % link references
+\usepackage{bookmark} % better references
+\usepackage{fancyhdr} % custom header and footer %? \fancypagestyle
+
+\usepackage{amsmath, amssymb, amsthm, siunitx} % math and physics %? \si, \qty, \unit
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corollario}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\usepackage{tabularx, booktabs, multirow, longtable} % table enhance
+\usepackage{caption, subcaption, graphicx, float} % figure enhance
+\graphicspath{{../assets}} % base graphics path
+
+\usepackage{tcolorbox, color} % colorful things %? \newtcolorbox, \lstinputlisting
+\usepackage{listings} % include code file
+
+\usepackage{subfiles} % split project in multiple files %* https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects#The_subfiles_package
+
+\title{
+    \textbf{Esperienza di ottica}\\
+    \medskip\Large Diffrazione
+}
+\author{Arianna Genuardi, Matteo Romano, Vittorio Strano, Florinda Tesi}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\subfile{sections/introduzione.tex}
+
+\end{document}
