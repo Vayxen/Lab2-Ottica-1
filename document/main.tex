@@ -3,6 +3,7 @@
 \usepackage[margin=1in]{geometry} % manage page dimensions
 \usepackage[utf8]{inputenc} % utf-8 encoding
 \usepackage[italian]{babel} % italian default text
+\usepackage{parskip}
 
 \usepackage{import} % import other .tex files
 \usepackage[hidelinks]{hyperref} % link references
@@ -10,6 +11,9 @@
 \usepackage{fancyhdr} % custom header and footer %? \fancypagestyle
 
 \usepackage{amsmath, amssymb, amsthm, siunitx} % math and physics %? \si, \qty, \unit
+
+\DeclareMathOperator{\sinc}{sinc}
+
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{corollary}{Corollario}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}

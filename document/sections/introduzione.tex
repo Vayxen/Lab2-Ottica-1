@@ -5,7 +5,35 @@
 
 \section{Introduzione}
 
-Questo esperimento vuole analizzare il carattere ondulatorio della luce tramite il fenomeno della \textbf{diffrazione}, causata dal passaggio del fascio di luce per una fenditura di dimensioni $d$ comparabili alla sua lunghezza d'onda $\lambda$.
+Questo esperimento vuole rilevare il carattere ondulatorio della luce tramite il fenomeno della \textbf{diffrazione}, causata dal passaggio del fascio di luce per una fenditura di dimensioni $a$ comparabili alla sua lunghezza d'onda $\lambda$, analizzando la figura d'interferenza formata su uno schermo a distanza $L$.
+
+La legge che descrive l'intensità della luce su un punto dello schermo è l'\autoref{eq:I su theta}
+
+\begin{equation} \label{eq:I su theta}
+    I(\theta) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \sin(\theta)  \right)
+\end{equation}
+
+in cui $\theta$ è l'angolo formato in corrispondenza della fenditura tra la retta perpendicolare allo schermo, passante per il suo centro, e quella passante per il punto dello schermo preso in analisi.
+
+Dato che la distanza tra la fenditura e lo schermo $L \gg a$ è possibile applicare l'approssimazione in \autoref{eq:approx theta}
+
+\begin{equation} \label{eq:approx theta}
+    \sin(\theta) \approx \theta = \arctan\left( \frac{y}{L} \right) \approx \frac{y}{L} 
+\end{equation}
+
+dove $y$ indica la distanza del punto in analisi dal centro dello schermo.
+
+Si giunge quindi all'\autoref{eq:I su x} utilizzata per il fit.
+
+\begin{equation} \label{eq:I su x}
+    I(y) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \frac{y}{L}  \right)
+\end{equation}
+
+Per trovare i punti di minimo basta porre $\dfrac{a y}{\lambda L} \in \mathbb{Z}_{\setminus \{0\}}$ ovvero
+
+\begin{equation} \label{eq:y=0 values}
+    y \in \left\{m\frac{\lambda L}{a}: m \in \mathbb{Z}_{\setminus \{0\}} \right\}
+\end{equation}
 
 %Le leggi che esprimono la larghezza $a$ della fenditura, l'intensità $I$ in funzione della distanza dal picco centrale $y_0$ e la sua larghezza sulla figura di interferenza, sono indicate qui di seguito insieme alla spiegazione di ciascun parametro:
 
@@ -15,7 +43,7 @@ Questo esperimento vuole analizzare il carattere ondulatorio della luce tramite 
 %     %!rimpiazza questo commento con l'equazione
 % \end{align}
 
-Nell'esperimento si cercherà di ({\color{red}ottenere? derivare? stimare?}) sperimentalmente le dimensioni della fenditura utilizzata (confrontando il risultato con le dimensioni nominali) e di ricavare la larghezza del picco centrale. %mi manca qualcosa penso
+% Nell'esperimento si cercherà di ({\color{red}ottenere? derivare? stimare?}) sperimentalmente le dimensioni della fenditura utilizzata (confrontando il risultato con le dimensioni nominali) e di ricavare la larghezza del picco centrale. %mi manca qualcosa penso
 
 
 
