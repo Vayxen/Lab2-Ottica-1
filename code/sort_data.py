@@ -4,7 +4,7 @@ import re
 import numpy as np
 import pandas as pd
 
-RAD_TO_METER = 0.0789
+RAD_TO_METER = 0.0789 / (2 * np.pi)
 
 here = path.dirname(__file__)
 data_path = path.join(here, "../data")
@@ -50,5 +50,5 @@ for col in df:
 for key, value in sets.items():
     file = path.join(data_path, key + '.tsv')
     value.dropna(inplace=True)
-    value['y'] = value['a'] / (2 * np.pi) * RAD_TO_METER
+    value['y'] = value['a'] * RAD_TO_METER
     value.to_csv(file, sep='\t', index=False)
