@@ -23,7 +23,7 @@ def size(
         (default is (1, 1))
     ratio: float
         ratio width / height
-        (default is golden ratio in portait mode)
+        (default is golden ratio in portrait mode)
     unit: Literal['pt', 'cm', 'in']
         name of the unit of the width value
         (default is 'pt')
