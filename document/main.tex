@@ -5,7 +5,6 @@
 \usepackage[italian]{babel} % italian default text
 \usepackage{parskip}
 
-\usepackage{import} % import other .tex files
 \usepackage[hidelinks]{hyperref} % link references
 \usepackage{bookmark} % better references
 \usepackage{fancyhdr} % custom header and footer %? \fancypagestyle
@@ -18,9 +17,18 @@
 \newtheorem{corollary}{Corollario}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 
+\usepackage{import} % import other .tex files
 \usepackage{tabularx, booktabs, multirow, longtable} % table enhance
 \usepackage{caption, subcaption, graphicx, float} % figure enhance
 \graphicspath{{../assets}} % base graphics path
+\graphicspath{{../images}} % base graphics path
+
+\newcommand{\includefig}[2]{
+    \def\svgwidth{#1}
+    \import{../images/}{#2.pdf_tex}
+}
+
+
 
 \usepackage{tcolorbox, color} % colorful things %? \newtcolorbox, \lstinputlisting
 \usepackage{listings} % include code file
