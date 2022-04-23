@@ -14,33 +14,16 @@ Questo esperimento vuole rilevare il carattere ondulatorio della luce tramite il
     \label{fig:fenditura}
 \end{figure}
 
-La legge che descrive l'intensità della luce su un punto dello schermo a distanza $y$ dal centro è l'\autoref{eq:I su y}.
-
-% todo: non so se inserire questa parte perché mi sempra troppo uno spiegone
-% La legge che descrive l'intensità della luce su un punto dello schermo a distanza $y$ dal centro è l'\autoref{eq:I su theta}.
-
-% \begin{equation} \label{eq:I su theta}
-%     I(\theta) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \sin(\theta)  \right)
-% \end{equation}
-
-% in cui $\theta$ è l'angolo formato in corrispondenza della fenditura tra la retta perpendicolare allo schermo, passante per il suo centro, e quella passante per il punto dello schermo preso in analisi.
-
-% Dato che la distanza tra la fenditura e lo schermo $L \gg y$ è possibile applicare l'approssimazione in \autoref{eq:approx theta}.
-
-% \begin{equation} \label{eq:approx theta}
-%     \sin(\theta) \approx \theta = \arctan\left( \frac{y}{L} \right) \approx \frac{y}{L} 
-% \end{equation}
-
-% Si giunge quindi all'\autoref{eq:I su y} utilizzata per il fit.
+La legge che descrive l'intensità della luce su un punto dello schermo a distanza $y$ dal centro è l'\autoref{eq:I su y} come ricavato in \autoref{sec:approssimazione theta}.
 
 \begin{equation} \label{eq:I su y}
     I(y) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \frac{y}{L}  \right)
 \end{equation}
 
-Per trovare i punti di minimo basta porre $\dfrac{a y}{\lambda L} \in \mathbb{Z}_{\setminus \{0\}}$ che può essere scritto come in \autoref{eq:y=0 values}.
+Per trovare i punti di minimo basta porre $\dfrac{a y}{\lambda L} \in \mathbb{Z} \setminus \{0\}$ ovvero
 
 \begin{equation} \label{eq:y=0 values}
-    y \in \left\{m\frac{\lambda L}{a}: m \in \mathbb{Z}_{\setminus \{0\}} \right\}
+    y \in \left\{m\frac{\lambda L}{a}: m \in \mathbb{Z} \setminus \{0\} \right\}
 \end{equation}
 
 % Nell'esperimento si cercherà di ({\color{red}ottenere? derivare? stimare?}) sperimentalmente le dimensioni della fenditura utilizzata (confrontando il risultato con le dimensioni nominali) e di ricavare la larghezza del picco centrale. %mi manca qualcosa penso

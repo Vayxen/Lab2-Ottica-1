@@ -1,0 +1,24 @@
+%! TEX root = ../main.tex
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Approssimazione algolo $\theta$} \label{sec:approssimazione theta}
+
+La legge che descrive l'intensità della luce su un punto dello schermo a distanza $y$ dal centro è l'\autoref{eq:I su theta}.
+
+\begin{equation} \label{eq:I su theta}
+    I(\theta) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \sin(\theta)  \right)
+\end{equation}
+
+in cui $\theta$ è l'angolo formato in corrispondenza della fenditura tra la retta perpendicolare allo schermo, passante per il suo centro, e quella passante per il punto dello schermo preso in analisi.
+
+Dato che la distanza tra la fenditura e lo schermo $L \gg y$ è possibile applicare l'approssimazione in \autoref{eq:approx theta}.
+
+\begin{equation} \label{eq:approx theta}
+    \sin(\theta) \approx \theta = \arctan\left( \frac{y}{L} \right) \approx \frac{y}{L} 
+\end{equation}
+
+Si giunge quindi all'\autoref{eq:I su y} utilizzata per il fit.
+
+\end{document}
