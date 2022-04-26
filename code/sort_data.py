@@ -17,33 +17,39 @@ df = pd.read_csv(
     quotechar=r'"',
 )
 
-column_map = {
+symbol_map = {
     r"Time (s)": 't',
-    r"Light Intensity (% of scale max)": 'I',
+    r"Relative Intensity": 'I',
     r"Angle (rad)": 'a',
     r"Position (m)": 'y',
 }
 
 sets = dict()
 for col in df:
-    match_raw = re.search(r'(?P<col>[\w\s]+\(.+\)) (?P<set>.+$)', col)
-    if match_raw:
-        match_file_name = re.search(
-            r"(?P<author>[\w]+) (?P<slit>[\d\.]+) (?P<sensor>[\d\.]+)( (?P<scale>[\w]+))?", match_raw.group('set'))
-        if match_file_name:
-            file_name = '_'.join([
-                match_file_name.group("slit"),
-                match_file_name.group("sensor"),
-                "1" if match_file_name.group("scale") else "100",
-                match_file_name.group("author")[0:2],
-            ])
+    for data_name in symbol_map.keys():
+        if col.startswith(data_name):
+            set_name = col.replace(data_name, "").strip()
+
+            match_set_name = re.search(
+                r"(?P<author>[\w]+) (?P<slit>[\d\.]+) (?P<sensor>[\d\.]+)( (?P<scale>[\w]+))?", set_name)
+            if match_set_name:
+                file_name = '_'.join([
+                    match_set_name.group("slit"),
+                    match_set_name.group("sensor"),
+                    "1" if match_set_name.group("scale") else "100",
+                    match_set_name.group("author")[0:2],
+                ])
+            else:
+                file_name = set_name
+
+            set_df = sets.setdefault(file_name, pd.DataFrame())
+
+            data_symbol = symbol_map[data_name]
+            set_df[data_symbol] = df[col]
+
+            break
         else:
-            file_name = match_raw.group('set')
-
-        set_df = sets.setdefault(file_name, pd.DataFrame())
-
-        col_name = column_map[match_raw.group('col')]
-        set_df[col_name] = df[col]
+            continue
     else:
         raise Exception(f'No match found for {col}')
 
