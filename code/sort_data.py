@@ -4,57 +4,48 @@ import re
 import numpy as np
 import pandas as pd
 
-RAD_TO_METER = 0.0789 / (2 * np.pi)
+POSITION_SCALE_FACTOR = 0.0789 / 0.15
+N_SET = 22
+N_COL = 2
 
 here = path.dirname(__file__)
 data_path = path.join(here, "../data")
 
 df = pd.read_csv(
-    path.join(data_path, "./Capstone Data.csv"),
-    sep=';',
+    path.join(data_path, "./Capstone Data.Tsv"),
+    sep='\t',
     engine='python',
     decimal=r',',
-    quotechar=r'"',
 )
 
-symbol_map = {
+col_map = {
     r"Time (s)": 't',
     r"Relative Intensity": 'I',
     r"Angle (rad)": 'a',
-    r"Position (m)": 'y',
+    r"Position (cm)": 'y',
 }
 
-sets = dict()
-for col in df:
-    for data_name in symbol_map.keys():
-        if col.startswith(data_name):
-            set_name = col.replace(data_name, "").strip()
+for i in range(0, N_SET * N_COL, N_COL):
+    set_df = df.iloc[:, i:i + N_COL].copy()
 
-            match_set_name = re.search(
-                r"(?P<author>[\w]+) (?P<slit>[\d\.]+) (?P<sensor>[\d\.]+)( (?P<scale>[\w]+))?", set_name)
-            if match_set_name:
-                file_name = '_'.join([
-                    match_set_name.group("slit"),
-                    match_set_name.group("sensor"),
-                    "1" if match_set_name.group("scale") else "100",
-                    match_set_name.group("author")[0:2],
-                ])
-            else:
-                file_name = set_name
+    filename = ""
+    for col in set_df.columns:
+        for col_name in col_map:
+            if col.startswith(col_name):
+                filename = col.replace(col_name, "").strip()
+                break
+        break
 
-            set_df = sets.setdefault(file_name, pd.DataFrame())
+    set_df.columns = [
+        col_map[col_name]
+        for col in set_df
+        for col_name in col_map
+        if col.startswith(col_name)
+    ]
 
-            data_symbol = symbol_map[data_name]
-            set_df[data_symbol] = df[col]
+    set_df.dropna(inplace=True)
 
-            break
-        else:
-            continue
-    else:
-        raise Exception(f'No match found for {col}')
+    set_df.loc[:, 'y'] *= POSITION_SCALE_FACTOR
 
-for key, value in sets.items():
-    file = path.join(data_path, key + '.tsv')
-    value.dropna(inplace=True)
-    value['y'] = value['a'] * RAD_TO_METER
-    value.to_csv(file, sep='\t', index=False)
+    set_df.to_csv(path.join(data_path, "raw", filename + ".tsv"), sep='\t', index=False)
+
