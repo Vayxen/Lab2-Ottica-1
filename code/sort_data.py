@@ -12,7 +12,7 @@ here = path.dirname(__file__)
 data_path = path.join(here, "../data")
 
 df = pd.read_csv(
-    path.join(data_path, "./Capstone Data.Tsv"),
+    path.join(data_path, "./Capstone Data.tsv"),
     sep='\t',
     engine='python',
     decimal=r',',
