@@ -6,7 +6,7 @@ import pandas as pd
 
 POSITION_SCALE_FACTOR = 0.0789 / 0.15
 N_SET = 22
-N_COL = 2
+N_COL = 4
 
 here = path.dirname(__file__)
 data_path = path.join(here, "../data")
@@ -21,8 +21,9 @@ df = pd.read_csv(
 col_map = {
     r"Time (s)": 't',
     r"Relative Intensity": 'I',
+    r"Light Intensity (% of scale max)": '%',
     r"Angle (rad)": 'a',
-    r"Position (cm)": 'y',
+    r"Position (m)": 'y',
 }
 
 for i in range(0, N_SET * N_COL, N_COL):
@@ -47,5 +48,4 @@ for i in range(0, N_SET * N_COL, N_COL):
 
     set_df.loc[:, 'y'] *= POSITION_SCALE_FACTOR
 
-    set_df.to_csv(path.join(data_path, "raw", filename + ".tsv"), sep='\t', index=False)
-
+    set_df.to_csv(path.join(data_path, "measure", filename + ".tsv"), sep='\t', index=False)
