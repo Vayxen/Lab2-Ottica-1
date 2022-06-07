@@ -10,3 +10,7 @@ Il file `data/_capstone.tsv` contiene i dati esportati direttamente dal progetto
 - Position (m)
 
 Nella stessa cartella c'è il file `data/sort_data.py` con un piccolo script che divide i set, scrivendoli ciascuno nel suo file.
+
+## Da fare
+
+- Sistemare i valori finali della fenditura per tutte le sezioni

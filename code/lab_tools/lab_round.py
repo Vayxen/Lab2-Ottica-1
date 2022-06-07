@@ -227,8 +227,9 @@ def measure_array(measures: Iterable[float], errors: Iterable[float], **kwargs) 
     return m_fin, e_fin
 
 
-def measure_series(measures: pd.Series, errors: pd.Series, **kwargs) -> pd.DataFrame:
+def measure_dataframe(measures: pd.Series, errors: pd.Series, **kwargs) -> pd.DataFrame:
     """Round a pandas.Series of measures based on a pandas.Series of errors preserving final zeros.
+    It returns the measures and errors as two separated columns in a pandas.Dataframe
 
     Parameters
     ----------
@@ -256,3 +257,38 @@ def measure_series(measures: pd.Series, errors: pd.Series, **kwargs) -> pd.DataF
     e_fin = pd.Series(e_values).to_frame(name=errors.name)
 
     return pd.concat([m_fin, e_fin], axis=1)
+
+
+def measure_series(measures: pd.Series, errors: pd.Series, scale: int = 0, format_str: str = r"\num{%(m)s+-%(e)s}", **kwargs) -> pd.DataFrame:
+    """Round a pandas.Series of measures based on a pandas.Series of errors preserving final zeros.
+    It returns the measures and errors as two separated columns in a pandas.Dataframe
+
+    Parameters
+    ----------
+    measures: pandas.Series
+        Measure to be rounded
+    errors: pandas.Series
+        Error of the measure that will be used to find the significant digits
+    **kwargs
+        digits: int = 1
+            Number of significant digits
+        one_more_digit: str = '1'
+            Digits that if at the end of the rounded number require 1 additional significant digit
+        decimals: int = 20
+            Max number of decimal to take into consideration when rounding
+
+    Returns
+    -------
+    pandas.DataFrame
+        A dataframe containing 2 column with the name of the measures and errors pandas.Series
+    """
+
+    m_values, e_values = measure_array(measures.values * 10**-scale, errors.values * 10**-scale)
+
+    return pd.Series([
+        format_str % {
+            'm': m,
+            'e': e,
+        }
+        for m, e in zip(m_values, e_values)
+    ]).to_frame(name=measures.name)
