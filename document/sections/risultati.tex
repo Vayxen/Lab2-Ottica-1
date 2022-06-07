@@ -26,7 +26,7 @@ Per la fenditura da $\qty{0.02}{\mm}$ ed apertura del sensore pari a $\qty{1.5}{
 \begin{figure}[ht!]
     \centering
     \includegraphics{min_0.02.png}
-    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.02}{\milli\metre}$. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare un segnale a frequenza costante che si sovrappone alla figura di diffrazione.} % todo: aggiungere qualcosa in più alla descrizione
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.02}{\milli\metre}$. Si può notare un'asimmetria dei picchi rispetto al centro. In figura sono segnati i minimi ricavati graficamente con i relativi errori. Su ciascun minimo si considera un errore di posizione di $\qty{1}{\mm}$, che contribuisce all'ampiezza di ciascuno degli intervalli evidenziati. È possibile notare un segnale a frequenza costante che si sovrappone alla figura di diffrazione.} % todo: aggiungere qualcosa in più alla descrizione+ commento asimmetria dati?
     \label{fig:minimi 0.02}
 \end{figure}
 
@@ -83,7 +83,7 @@ Si può notare che anche nei grafici \ref{fig:minimi 0.02} e \ref{fig:sensore 0.
 \begin{figure}[ht!]
     \centering
     \includegraphics{min_0.04.png}
-    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. In figura sono segnati i minimi ricavati graficamente con i relativi errori.} % todo: aggiungere qualcosa in più alla descrizione
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. In figura sono segnati i minimi ricavati graficamente con i relativi errori. Qui si considera un errore di posizione di $\qty{0.5}{\mm}$. % todo: aggiungere qualcosa in più alla descrizione, trovare forse un motivo migliore per l'errore di 1mm
     \label{fig:minimi 0.04}
 \end{figure}
 
@@ -109,11 +109,28 @@ Intersecando le barre d'errore dei valori ottenuti si ha $a = \qty{0.0424+-0.001
 
 % Prendendo in considerazione la somma delle barre d'errore dei valori ottenuti $a = \qty{0.043+-0.004}{\mm}$.
 
-% Facendo una media pesata dei valori ottenuti si ha $a = \qty{0.0424+-0.0012}{\mm}$.
+% Facendo una media pesata dei valori ottenuti si ha $a = \qty{0.0424+-0.0012}{\mm}$. %? media o intersezione
+
+% \begin{figure}[ht!]
+%     \centering
+%     \includegraphics{fit_0.04.png}
+%     \caption{Intensità luminosa $I_{0}$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{0}$, $a = \qty{0}{\mm}$ e $c = \num{0}$. }
+%     \label{fig:fit 0.04}
+% \end{figure}
+
+%* discutere compatibilità
 
 \newpage
 
 \subsection{Fenditura $a = \qty{0.08}{\milli\metre}$}
+
+% \begin{figure}[ht!]
+%     \centering
+%     \includegraphics{min_0.08.png}
+%     \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.08}{\mm}$. In figura sono segnati i minimi ricavati graficamente con i relativi errori. Qui si considera un errore di posizione di $\qty{0.25}{\mm}$ 
+%      todo: aggiungere qualcosa in più alla descrizione
+%     \label{fig:minimi 0.08}
+% \end{figure}
 
 \begin{table}[ht!]
     \centering
@@ -130,5 +147,17 @@ Intersecando le barre d'errore dei valori ottenuti si ha $a = \qty{0.0424+-0.001
     \end{tabular}
     \label{tab:minimi 0.08}
 \end{table}
+
+%? di nuovo intersezione o media
+
+% \begin{figure}[ht!]
+%     \centering
+%     \includegraphics{fit_0.08.png}
+%     \caption{Intensità luminosa $I_{0}$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.08}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{0}$, $a = \qty{0}{\mm}$ e $c = \num{0}$. }
+%     \label{fig:fit 0.08}
+% \end{figure}
+
+%* discuti compatibilità qui
+
 
 \end{document}
