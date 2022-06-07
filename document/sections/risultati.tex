@@ -5,7 +5,8 @@
 
 \section{Risultati}
 
-Avendo preso le misure a partire da un'estremità della guida dentata la curva non ha il picco centrato in $y = 0$, quindi si è proceduto con il traslare le misure. L'errore attribuito a questa operazione è di $\qty{1}{\mm}$.
+Avendo preso le misure a partire da un'estremità della guida dentata la curva non ha il picco centrato in $y = 0$, quindi si è proceduto con il traslare le misure.
+% L'errore attribuito a questa operazione è di $\qty{1}{\mm}$. %? review errore specifico per ogni fenditura?
 
 A partire dai dati raccolti con apertura del sensore pari a $\qty{1.5}{\mm}$ 
 è stata stimata la dimensione della fenditura utilizzando due metodi
@@ -39,23 +40,23 @@ Le posizioni dei minimi ottenute dalla \autoref{fig:minimi 0.02} sono riportate 
         \toprule
         $m$  & $y \; (\si{\metre})$ & $\frac{\lambda L}{a} \; (\si{\metre})$ & $a \; (\si{\mm})$ \\
         \midrule
-        $-2$ & \num{-0.0613+-0.0023} & \num{0.0307+-0.0012} & \num{0.0209+-0.0008} \\
-        $-1$ & \num{-0.0313+-0.0023} & \num{0.0313+-0.0023} & \num{0.0205+-0.0015} \\
-        $1$  & \num{0.0304+-0.0024}  & \num{0.0304+-0.0024} & \num{0.0211+-0.0016} \\
-        $2$  & \num{0.0610+-0.0028}  & \num{0.0305+-0.0014} & \num{0.0210+-0.0010} \\
+        $-2$ & \num{-0.061+-0.007} & \num{0.030+-0.003} & \num{0.021+-0.002} \\
+        $-1$ & \num{-0.032+-0.004} & \num{0.032+-0.004} & \num{0.020+-0.003} \\
+        $1$  & \num{0.031+-0.005}  & \num{0.031+-0.005} & \num{0.021+-0.003} \\
+        $2$  & \num{0.061+-0.006}  & \num{0.030+-0.003} & \num{0.021+-0.002} \\
         \bottomrule
     \end{tabular}
     \label{tab:minimi 0.02}
 \end{table}
 
-Intersecando i valori di $a$ così ricavati si ottiene $a = \qty{0.0209+-0.0008}{\mm}$.
+Intersecando i valori di $a$ così ricavati si ottiene $a = \qty{0.021+-0.002}{\mm}$.
 
-% Facendo una media pesata dei valori di $a$ ottenuti si ottiene $a = \qty{0.0209+-0.0005}{\mm}$. %? review: è meglio l'intersezione o la media?
+% Facendo una media pesata dei valori di $a$ ottenuti si ottiene $a = \qty{0.0209+-0.0012}{\mm}$. %? review: è meglio l'intersezione o la media?
 
 \begin{figure}[ht!]
     \centering
     \includegraphics{fit_0.02.png}
-    \caption{Intensità luminosa $I_{0}$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.02}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{1.12+-0.15}$, $a = \qty{0.021+-0.002}{\mm}$ e $c = \num{3.6+-0.8e-2}$. }
+    \caption{Intensità luminosa $I_{0}$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.02}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{1.12+-0.15}$, $a = \qty{0.021+-0.002}{\mm}$ e $c = \num{3.6+-0.8e-2}$.}
     \label{fig:fit 0.02}
 \end{figure}
 
@@ -83,7 +84,7 @@ Si può notare che anche nei grafici \ref{fig:minimi 0.02} e \ref{fig:sensore 0.
 \begin{figure}[ht!]
     \centering
     \includegraphics{min_0.04.png}
-    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. I dati dei set 1 e 3 risultano quasi simmetrici, mentre il set 2 è visibilmente asimmetrico. In figura sono segnati i minimi ricavati graficamente con i relativi errori. Qui si considera un errore di posizione di $\qty{0.5}{\mm}$. % todo: aggiungere qualcosa in più alla descrizione, trovare forse un motivo migliore per l'errore di 1mm
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. I dati dei set 1 e 3 risultano quasi simmetrici, mentre il set 2 è visibilmente asimmetrico. In figura sono segnati i minimi ricavati graficamente con i relativi errori. Qui si considera un errore di posizione di $\qty{0.5}{\mm}$.} % todo: aggiungere qualcosa in più alla descrizione, trovare forse un motivo migliore per l'errore di 1mm
     \label{fig:minimi 0.04}
 \end{figure}
 
@@ -96,10 +97,10 @@ Le posizioni dei minimi ottenute sono le seguenti:
         \toprule
         $m$  & $y \; (\si{\metre})$ & $\frac{\lambda L}{a} \; (\si{\metre})$ & $a \; (\si{\mm})$ \\
         \midrule
-        $-2$ & $0.0305 \pm 0.0014$ & $0.0153 \pm 0.0007$ & \num{0.0418+-0.0019} \\
-        $-1$ & $0.0154 \pm 0.0011$ & $0.0154 \pm 0.0011$ & \num{0.042+-0.003} \\
-        $1$  & $0.0149 \pm 0.0010$ & $0.0149 \pm 0.0010$ & \num{0.043+-0.003} \\
-        $2$  & $0.0298 \pm 0.0015$ & $0.0149 \pm 0.0008$ & \num{0.043+-0.002} \\
+        $-2$ & $0.030 \pm 0.002$ & $0.0151 \pm 0.0011$ & \num{0.042+-0.003} \\
+        $-1$ & $0.0153 \pm 0.0017$ & $0.0153 \pm 0.0017$ & \num{0.042+-0.005} \\
+        $1$  & $0.0151 \pm 0.0013$ & $0.0151 \pm 0.0013$ & \num{0.042+-0.004} \\
+        $2$  & $0.030 \pm 0.002$ & $0.0150 \pm 0.0011$ & \num{0.043+-0.003} \\
         \bottomrule
     \end{tabular}
     \label{tab:minimi 0.04}
@@ -140,10 +141,10 @@ Intersecando le barre d'errore dei valori ottenuti si ha $a = \qty{0.0424+-0.001
         \toprule
         $m$  & $y \; (\si{\metre})$ & $\frac{\lambda L}{a} \; (\si{\metre})$ & $a \; (\si{\mm})$ \\
         \midrule
-        $-2$ & $0.0155 \pm 0.0006$ & $0.0073 \pm 0.0003$ & \num{0.088+-0.004} \\
-        $-1$ & $0.0076 \pm 0.0005$ & $0.0076 \pm 0.0005$ & \num{0.084+-0.006} \\
-        $1$  & $0.0077 \pm 0.0003$ & $0.0077 \pm 0.0003$ & \num{0.083+-0.003} \\
-        $2$  & $0.0152 \pm 0.0004$ & $0.0076 \pm 0.0002$ & \num{0.084+-0.002} \\
+        $-2$ & $0.0156 \pm 0.0013$ & $0.0078 \pm 0.0006$ & \num{0.082+-0.007} \\
+        $-1$ & $0.0076 \pm 0.0011$ & $0.0076 \pm 0.0011$ & \num{0.084+-0.012} \\
+        $1$  & $0.0077 \pm 0.0008$ & $0.0077 \pm 0.0008$ & \num{0.084+-0.008} \\
+        $2$  & $0.0153 \pm 0.0010$ & $0.0076 \pm 0.0005$ & \num{0.084+-0.005} \\
         \bottomrule
     \end{tabular}
     \label{tab:minimi 0.08}
