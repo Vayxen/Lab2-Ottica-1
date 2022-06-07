@@ -19,7 +19,9 @@ A partire dai dati raccolti con apertura del sensore pari a $\qty{1.5}{\mm}$
     I(I_{0}, a, c) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \frac{y}{L} \right) + c
 \end{equation}
 
-\subsection{Fenditura $a = \qty{0.02}{\milli\metre}$}
+\subsection{Fenditura da $\mathbf{\qty{0.02}{\mm}}$}
+
+Per la fenditura da $\qty{0.02}{\mm}$ ed apertura del sensore pari a $\qty{1.5}{\mm}$ sono stati raccolti $4$ set di dati che sono riportati in %\autoref{}.
 
 \begin{figure}[ht!]
     \centering
@@ -28,68 +30,105 @@ A partire dai dati raccolti con apertura del sensore pari a $\qty{1.5}{\mm}$
     \label{fig:minimi 0.02}
 \end{figure}
 
-Le ascisse ottenute dei minimi sono le seguenti:
+Le posizioni dei minimi ottenute dalla \autoref{fig:minimi 0.02} sono riportate in \autoref{tab:minimi 0.02}.
 
 \begin{table}[ht!]
     \centering
-    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.02}, riportata di fianco al proprio indice $m$ ed al valore $\frac{\lambda L}{a} \; (\si{\metre})$ stimati seguendo l'\autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato con la formula inversa dopo aver posto $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5}{\cm}$.}
+    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.02}, riportata di fianco al proprio indice $m$ ed al valore $\frac{\lambda L}{a} \; (\si{\metre})$ stimati seguendo l'\autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato con la formula inversa dopo aver posto $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$ sommando in quadratura i contributi all'errore di $\delta y$ e $\delta L$.}
     \begin{tabular}{r|cc|c}
         \toprule
         $m$  & $y \; (\si{\metre})$ & $\frac{\lambda L}{a} \; (\si{\metre})$ & $a \; (\si{\mm})$ \\
         \midrule
-        $-2$ & $-0.0613 \pm 0.0013$ & $0.0307 \pm 0.0007$ & \num{0.0209+-0.0005} \\
-        $-1$ & $-0.0313 \pm 0.0013$ & $0.0313 \pm 0.0013$ & \num{0.0205+-0.0009} \\
-        $1$  & $0.0304 \pm 0.0014$  & $0.0304 \pm 0.0014$ & \num{0.0211+-0.0010} \\
-        $2$  & $0.0610 \pm 0.0018$  & $0.0305 \pm 0.0009$ & \num{0.0210+-0.0006} \\
+        $-2$ & \num{-0.0613+-0.0023} & \num{0.0307+-0.0012} & \num{0.0209+-0.0008} \\
+        $-1$ & \num{-0.0313+-0.0023} & \num{0.0313+-0.0023} & \num{0.0205+-0.0015} \\
+        $1$  & \num{0.0304+-0.0024}  & \num{0.0304+-0.0024} & \num{0.0211+-0.0016} \\
+        $2$  & \num{0.0610+-0.0028}  & \num{0.0305+-0.0014} & \num{0.0210+-0.0010} \\
         \bottomrule
     \end{tabular}
     \label{tab:minimi 0.02}
 \end{table}
 
-Facendo una media dei valori ricavati 
+Intersecando i valori di $a$ così ricavati si ottiene $a = \qty{0.0209+-0.0008}{\mm}$.
+
+% Facendo una media pesata dei valori di $a$ ottenuti si ottiene $a = \qty{0.0209+-0.0005}{\mm}$. %? review: è meglio l'intersezione o la media?
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics{fit_0.02.png}
+    \caption{Intensità luminosa $I_{0}$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.02}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{1.12+-0.15}$, $a = \qty{0.021+-0.002}{\mm}$ e $c = \num{3.6+-0.8e-2}$. }
+    \label{fig:fit 0.02}
+\end{figure}
+
+Sia il valore ottenuto col fit che il valore ottenuto dal grafico risultano compatibili con il valore teorico di $a$.
+
+Per confrontare le misure ottenute con diverse aperture del sensore si è scelto di utilizzare il set $1$ delle misure con apertura $\qty{1.5}{\mm}$, in quanto è quello che meno presenta deformazioni lungo il picco centrale e ci permette di confrontare l'ampiezza di quest'ultimo.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics{sensor_0.02.png}
+    \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) per ciascuna delle due aperture del sensore.
+    Riducendo l'apertura del sensore l'intensità misurata diminuisce permettendo di passare al fondo-scala più piccolo (\textit{candela}) per l'apertura da $\qty{1.0}{\mm}$.
+    I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$, questo permette di confrontare i picchi con più semplicità. In effetti è possibile notare come la curva tracciata dalle misure con un'apertura più stretta abbia un picco centrale leggermente più schiacciato.
+    Inoltre nelle code delle curve è evidente come il rumore di fondo diminuisca notevolmente, in particolar modo nel set di dati con il sensore a $\qty{1.0}{\mm}$. Questo potrebbe essere dovuto alla riduzione della luce che entra nel sensore o al cambio di fondo-scala, che porta ad una corrente di buio notevolmente inferiore.
+    Come sarà possibile vedere in seguito la seconda ipotesi è quella che più si adatta ai dati raccolti.} %! quantificare di quanto si stringe il picco
+    \label{fig:sensore 0.02}
+\end{figure}
+
+Si può notare che anche nei grafici \ref{fig:minimi 0.02} e \ref{fig:sensore 0.02} persiste il segnale di frequenza costante: questo potrebbe essere dato da un difetto della fenditura stessa, che causa un'interferenza la quale si sovrappone alla figura di diffrazione.
+
+\newpage
 
 \subsection{Fenditura $a = \qty{0.04}{\milli\metre}$}
 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics{min_0.04.png}
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. In figura sono segnati i minimi ricavati graficamente con i relativi errori.} % todo: aggiungere qualcosa in più alla descrizione
+    \label{fig:minimi 0.04}
+\end{figure}
 
+Le posizioni dei minimi ottenute sono le seguenti:
+
+\begin{table}[ht!]
+    \centering
+    \caption{}
+    \begin{tabular}{r|cc|c}
+        \toprule
+        $m$  & $y \; (\si{\metre})$ & $\frac{\lambda L}{a} \; (\si{\metre})$ & $a \; (\si{\mm})$ \\
+        \midrule
+        $-2$ & $0.0305 \pm 0.0014$ & $0.0153 \pm 0.0007$ & \num{0.0418+-0.0019} \\
+        $-1$ & $0.0154 \pm 0.0011$ & $0.0154 \pm 0.0011$ & \num{0.042+-0.003} \\
+        $1$  & $0.0149 \pm 0.0010$ & $0.0149 \pm 0.0010$ & \num{0.043+-0.003} \\
+        $2$  & $0.0298 \pm 0.0015$ & $0.0149 \pm 0.0008$ & \num{0.043+-0.002} \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:minimi 0.04}
+\end{table}
+
+Intersecando le barre d'errore dei valori ottenuti si ha $a = \qty{0.0424+-0.0014}{\mm}$.
+
+% Prendendo in considerazione la somma delle barre d'errore dei valori ottenuti $a = \qty{0.043+-0.004}{\mm}$.
+
+% Facendo una media pesata dei valori ottenuti si ha $a = \qty{0.0424+-0.0012}{\mm}$.
+
+\newpage
 
 \subsection{Fenditura $a = \qty{0.08}{\milli\metre}$}
 
-
-
-%... Per i 4 grafici seguenti, è stata utilizzata la sensibilità "candela".
-
-% \begin{figure}[ht!]
-%     \includegraphics{../graphs/fit_0.02_1.5.png}
-%     \caption{Grafico dell’intensità della luce in funzione della posizione (cm). I set riportati sul grafico sono tre, ciascuno riferito ad un’apertura del detector di \num{1.5}, \num{1.0} e \qty{0.5}{\milli\meter}. In questo caso, la fenditura utilizzata è quella da \qty{0.02}{\milli\meter}. Si nota che i dati (in particolar modo quelli situati sul picco) non sono del tutto fedeli al fit.}
-%     \label{fig:fit_0.02_1.5}
-% \end{figure}
-
-% \begin{figure}[ht!]
-%     \includegraphics{../graphs/fit_0.02_1.0.png}
-%     \caption{}
-%     \label{fig:fit_0.02_1.0}
-% \end{figure}
-
-% \begin{figure}[ht!]
-%     \includegraphics{../graphs/fit_0.04_1.5.png}
-%     \caption{Grafico dell’intensità della luce in funzione della posizione (cm). I set riportati sul grafico sono tre, ciascuno riferito ad un’apertura del detector di \num{1.5}, \num{1.0} e \qty{0.5}{\milli\meter}; in questo caso la fenditura utilizzata è quella da \qty{0.04}{\milli\meter}. Qui i dati presentano una migliore fedeltà alla forma del fit, nonostante ci sia un piccolo spostamento verso sinistra.}
-%     \label{fig:fit_0.04_1.5}
-% \end{figure}
-
-% \begin{figure}[ht!]
-%     \includegraphics{../graphs/fit_0.08_1.5.png}
-%     \caption{Grafico dell’intensità della luce in funzione della posizione (cm). I set riportati sul grafico sono tre, ciascuno riferito ad un’apertura del detector di \num{1.5}, \num{1.0} e \qty{0.5}{\milli\meter}; in questo caso la fenditura utilizzata è quella da \qty{0.08}{\milli\meter}.}
-%     \label{fig:fit_0.08_1.5}
-% \end{figure}
-
-% %* Stavo per commentare i grafici sopra ma aspetto il "cambio di layout" eventualmente
-
-% Sul grafico seguente, ottenuto come media tra i vari set, si è proceduto a cercare i minimi. Per trovarne la posizione sulle ascisse, sono stati considerati degli intorni centrati sulla posizione teorica di ciascun minimo, data dall'\autoref{eq:y=0 values}, di raggio $\frac{\lambda L}{2 a}$. È bastato infine localizzare il punto di ordinata più bassa in ciascuno di questi intervalli, evidenziati nella (reference alla figura) da rette tratteggiate verticali.
-
-% \begin{figure}[ht!]
-%     \includegraphics{../graphs/}
-%     \caption{Grafico utilizzato per l'acquisizione dei punti di minimo (punti di interferenza distruttiva).}
-%     \label{fig:}
-% \end{figure}
+\begin{table}[ht!]
+    \centering
+    \caption{}
+    \begin{tabular}{r|cc|c}
+        \toprule
+        $m$  & $y \; (\si{\metre})$ & $\frac{\lambda L}{a} \; (\si{\metre})$ & $a \; (\si{\mm})$ \\
+        \midrule
+        $-2$ & $0.0155 \pm 0.0006$ & $0.0073 \pm 0.0003$ & \num{0.088+-0.004} \\
+        $-1$ & $0.0076 \pm 0.0005$ & $0.0076 \pm 0.0005$ & \num{0.084+-0.006} \\
+        $1$  & $0.0077 \pm 0.0003$ & $0.0077 \pm 0.0003$ & \num{0.083+-0.003} \\
+        $2$  & $0.0152 \pm 0.0004$ & $0.0076 \pm 0.0002$ & \num{0.084+-0.002} \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:minimi 0.08}
+\end{table}
 
 \end{document}
