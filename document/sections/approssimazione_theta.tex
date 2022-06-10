@@ -13,12 +13,18 @@ La legge che descrive l'intensità della luce su un punto dello schermo a distan
 
 in cui $\theta$ è l'angolo formato in corrispondenza della fenditura tra la retta perpendicolare allo schermo, passante per il suo centro, e quella passante per il punto dello schermo preso in analisi.
 
-Dato che la distanza tra la fenditura e lo schermo $L \gg y$ è possibile applicare l'approssimazione in \autoref{eq:approx theta}.
+La distanza massima dal centro dello schermo raggiunta dal sensore è di $y = \qty{10}{\cm}$ e la distanza fenditura-sensore è pari a $L = \qty{98.5}{\cm}$ il che implica che il massimo angolo $\theta$ raggiunto è pari a 
+
+\begin{equation*}
+    \theta_{max} = \arctan\left( \frac{y}{L} \right) \approx \qty{5.8}{\degree}
+\end{equation*}
+
+valore per il quale è possibile applicare l'approssimazione in \autoref{eq:approx theta}.
 
 \begin{equation} \label{eq:approx theta}
     \sin(\theta) \approx \theta = \arctan\left( \frac{y}{L} \right) \approx \frac{y}{L} 
 \end{equation}
 
-Si giunge quindi all'\autoref{eq:I su y} utilizzata per il fit.
+Quindi in \autoref{eq:I su theta} è possibile sostituire a $\sin(\theta)$ il rapporto $\dfrac{y}{L}$ giungendo all'\autoref{eq:I su y}.
 
 \end{document}

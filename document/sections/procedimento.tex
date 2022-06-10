@@ -15,4 +15,23 @@ Prima di effettuare le misurazioni di ogni set è stata selezionata l'apertura d
 
 Con l'apertura del detector a \qty{1.5}{\milli\meter} sono stati effettuati più set per ciascuna fenditura in modo da verificare la ripetibilità dei dati raccolti. Successivamente è stata variata l'apertura del sensore per analizzare l'effetto delle variabili al contorno.
 
+Sono anche state raccolte delle misure di intensità con il sensore otturato in modo da stimare la corrente di buio per i fondoscala utilizzati, ottenendo una corrente di buio pari a \num{0.030+-0.006} per il fondoscala \textit{lampadina} e \num{0.017+-0.005} per il fondoscala \textit{candela}.
+
+Avendo preso le misure a partire da un'estremità della guida dentata la curva non ha il picco centrato in $y = 0$, quindi si è proceduto con il traslare la posizione delle misure fino a centrare il picco di ciascuna curva.
+% L'errore attribuito a questa operazione è di $\qty{1}{\mm}$. %? review errore specifico per ogni fenditura?
+
+A partire dai dati raccolti con apertura del sensore pari a $\qty{1.5}{\mm}$
+è stata stimata la dimensione della fenditura utilizzando due metodi
+
+\begin{enumerate}
+    \item La posizione dei minimi ricavata graficamente che permette di ottenere la dimensione della fenditura utilizzando l'\autoref{eq:y=0 values}
+    \item Il fit tramite l'\autoref{eq:fit}, in cui è stato inserito un parametro $c$ che permette di traslare la curva verticalmente in modo da tenere in considerazione la presenza di rumore.
+\end{enumerate}
+
+\begin{equation} \label{eq:fit}
+    I_{I_{0}, a, c}(y) = I_{0} \; \sinc^{2} \left( \frac{\pi a}{\lambda} \cdot \frac{y}{L} \right) + c
+\end{equation}
+
+Infine le misure effettuate variando l'apertura del sensore sono state confrontate, l'effetto atteso è una riduzione dell'intensità luminosa ed un conseguente restringimento del picco centrale derivante dalla diminuzione della superficie investita dalla luce. %? review non mi piace l'ultima frase
+
 \end{document}
