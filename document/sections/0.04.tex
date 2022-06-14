@@ -10,26 +10,22 @@ Per la fenditura da $\qty{0.04}{\mm}$ ed apertura del sensore pari a $\qty{1.5}{
 \begin{figure}[ht!]
     \centering
     \includegraphics{single_scatter_0.04.png}
-    \caption{Misure dell'intensità luminosa $I$ in funzione della posizione $y$ (in metri) del sensore.} %todo: aggiungere un commento
+    \caption{Misure dell'intensità luminosa $I$ in funzione della posizione $y$ (in metri) del sensore con apertura pari a \qty{1.5}{\mm} e fenditura di \qty{0.04}{\mm}. Le curve presentano un picco centrale con una leggera variazione di intensità tra l'andata e il ritorno del sensore, maggiormente evidente nei set $1$ e $2$. La forma dei massimi laterali differisce tra i vari set.}
     \label{fig:single scatter 0.04}
 \end{figure}
-
-\newpage
 
 Sovrapponendo i set si è proceduto ad individuare la posizione dei minimi attribuendogli una barra d'errore sufficientemente grande da rendere la misura compatibile con tutti i set. Le posizioni dei minimi ottenute dalla \autoref{fig:minimi 0.04} sono riportate in \autoref{tab:minimi 0.04} di fianco ai valori della fenditura ricavati utilizzando l'\autoref{eq:y=0 values}.
 
 \begin{figure}[ht!]
     \centering
     \includegraphics{min_0.04.png}
-    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a \qty{0.04}{\mm}. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare come i picchi laterali presentino varie deformazioni da cui non è tuttavia possibile individuare un segnale sovrapposto come nel caso della fenditura da \qty{0.02}{\mm}; si è invece ipotizzato che ciò dipenda dalla variazione del rumore di fondo. %? review: davvero... dal rumore di fondo?
-    %* se stavolta non è il segnale parassita, o è davvero il rumore che ha fatto wooooooooooooooooooooooo per nessun motivo, oppure mi son perso del sarcasmo e ti stai in modo molto subdolo giustificando per aver mosso il sensore con la mano ferma di un alcolizzato, il che è ragionevole e lo farei anche io onestamente
-    } % todo: aggiungere qualcosa in più alla descrizione
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a \qty{0.04}{\mm}. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare come i picchi laterali presentino varie deformazioni da cui non è tuttavia possibile individuare un segnale sovrapposto come nel caso della fenditura da \qty{0.02}{\mm}.} % todo: trovare una giustificazione per i picchi laterali
     \label{fig:minimi 0.04}
 \end{figure}
 
 \begin{table}[ht!]
     \centering
-    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.04}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per l'errore $\delta a$ sono stati sommati in quadratura i contributi di $\delta y$ e $\delta L$, anche qui rendendo $\delta L$ pressochè trascurabile.}
+    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.04}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per il calcolo dell'errore di $a$ è stato considerato solo quello di $y$ in quanto l'errore su $L$ è trascurabile.}
     \import{../tables/}{mins_0.04.tex}
     \label{tab:minimi 0.04}
 \end{table}
@@ -47,29 +43,21 @@ Successivamente si è proceduto con il fit utilizzando l'\autoref{eq:fit} e otte
 \begin{figure}[ht!]
     \centering
     \includegraphics{fit_0.04.png}
-    \caption{Intensità luminosa $I_{0}$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{4.42+-0.4}$, $a = \qty{0.044+-0.005}{\mm}$ e $c = \num{3.60+-0.02}$. }
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.04}{\mm}$. In figura è riportato il fit fatto utilizzando l'\autoref{eq:fit}. I valori dei parametri ottenuti sono $I_{0} = \num{4.42+-0.4}$, $a = \qty{0.044+-0.005}{\mm}$ e $c = \num{3.60+-0.02}$. }
     \label{fig:fit 0.04}
 \end{figure}
 
 Entrambi $a_g$ e $a_f$ risultano compatibili con il valore teorico di $a = \qty{0.04}{\mm}$.
 
-\newpage
-
-Per confrontare le misure ottenute con diverse aperture del sensore si è scelto di utilizzare il set $3$ delle misure con apertura $\qty{1.5}{\mm}$, in quanto presenta una alta densità di misure l'uno il picco e una variazione trascurabile dell'intensità massima. Dopo aver scalato le intensità dei set utilizzati in modo che il valore massimo di $I$ risultasse pari ad $1$ per tutti i set, essi sono stati riportati sovrapposti in \autoref{fig:sensore 0.04}.
+Per confrontare le misure ottenute con diverse aperture del sensore si è scelto di utilizzare il set $3$ delle misure con apertura $\qty{1.5}{\mm}$, in quanto presenta una alta densità di misure lungo il picco e una variazione trascurabile dell'intensità massima. Dopo aver scalato le intensità dei set utilizzati in modo che il valore massimo di $I$ risultasse pari ad $1$ per tutti i set, essi sono stati riportati sovrapposti in \autoref{fig:sensore 0.04}, tuttavia non è stato possibile evidenziare alcuna correlazione tra l'ampiezza del sensore e la larghezza del picco centrale.
 
 \begin{figure}[ht!]
     \centering
     \includegraphics{sensor_0.04.png}
     \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) per ciascuna delle due aperture del sensore.
-    Tutti i set sono stati misurati con il fondoscala intermedio (\textit{lampadina}). I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$, permettendo di confrontare i picchi con più semplicità.
-    Non è possibile evidenziare alcuna correlazione tra l'ampiezza del sensore e la larghezza del picco centrale.} % todo: inserire un commento sul rumore? O non ha senso visto che le intensità sono scalate?
+    Tutti i set sono stati misurati con il fondoscala intermedio (\textit{lampadina}). I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$.
+    Dato che la curva con apertura del sensore pari a \qty{1.5}{\mm} ha il picco più stretto delle altre, mentre quello con apertura pari a \qty{1.0}{\mm} risulta essere più ampio non è possibile evidenziare alcuna correlazione tra l'ampiezza del sensore e la larghezza del picco centrale.}
     \label{fig:sensore 0.04}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics{scale_0.04.png}
-    \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) con apertura del sensore fissata a \qty{1.0}{\mm} e variando il fondoscala. È possibile osservare come il rumore registrato all'estremo della coda della curva sia minore quando si utilizza un fondoscala differente, questo è stato attribuito alla variazione della corrente di buio per i diversi che risulta essere \num{0.030+-0.006} per il fondoscala \textit{lampadina} e \num{0.017+-0.005} per il fondoscala \textit{candela}.} %? review: magari aggiungendo come sono state ricavate le misure della corrente di buio e come sono stati stimati gli errori su di esse (come semi-disperione delle misure più grande e più piccola)
 \end{figure}
 
 \end{document}

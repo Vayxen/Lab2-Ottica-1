@@ -19,7 +19,7 @@ Sovrapponendo i set si è proceduto ad individuare la posizione dei minimi attri
 \begin{figure}[ht!]
     \centering
     \includegraphics{min_0.02.png}
-    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a $\qty{0.02}{\milli\metre}$. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare un segnale sinusoidale che si sovrappone alla figura di diffrazione causando una deformazione dei picchi laterali i quali risultano essere asimmetrici rispetto al centro, infatti l'intensità luminosa $I$ è inferiore per valori positivi della posizione.
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) con apertura del sensore di \qty{1.5}{\mm} per la fenditura a \qty{0.02}{\mm}. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare un segnale sinusoidale che si sovrappone alla figura di diffrazione causando una deformazione dei picchi laterali inoltre essi risultano essere asimmetrici rispetto al centro, infatti l'intensità luminosa $I$ è inferiore per valori positivi della posizione.
         % Su ciascun minimo si considera un errore di posizione di $\qty{1.0}{\mm}$, che contribuisce all'ampiezza di ciascuno degli intervalli evidenziati. È possibile notare un segnale a frequenza costante che si sovrappone alla figura di diffrazione.
     } % todo: aggiungere qualcosa in più alla descrizione
     \label{fig:minimi 0.02}
@@ -27,8 +27,7 @@ Sovrapponendo i set si è proceduto ad individuare la posizione dei minimi attri
 
 \begin{table}[ht!]
     \centering
-    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.02}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$. Per l'errore $\delta a$ sono stati sommati in quadratura $\delta y$ e $\delta L$, che permette di considerare trascurabile il contributo di $\delta L$.} %? review: fa un pò schifo l'ultima frase, ma il concetto è quello
-    %? magari così va meglio? -v
+    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.02}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per il calcolo dell'errore di $a$ è stato considerato solo quello di $y$ in quanto l'errore su $L$ è trascurabile.}
     \import{../tables/}{mins_0.02.tex}
     \label{tab:minimi 0.02}
 \end{table}
@@ -57,16 +56,15 @@ Per confrontare le misure ottenute con diverse aperture del sensore si è scelto
 \begin{figure}[ht!]
     \centering
     \includegraphics{sensor_0.02.png}
-    \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) per ciascuna delle due aperture del sensore.
+    \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) per ciascuna delle due aperture del sensore e con fenditura pari a \qty{0.02}{\mm}.
         Riducendo l'apertura del sensore l'intensità misurata diminuisce permettendo di passare al fondo-scala più piccolo (\textit{candela}) per l'apertura da $\qty{1.0}{\mm}$.
-        I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$, permettendo di confrontare i picchi con più semplicità. È possibile notare come la curva tracciata dalle misure con un'apertura più stretta abbia un picco centrale leggermente più schiacciato, tuttavia questo potrebbe essere dovuto ad un fattore di scala errato per l'intensità di una delle due curve in quanto esse non presentano un'intensità del picco centrale netta.
+        I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$. È possibile notare come la curva tracciata dalle misure con un'apertura più stretta abbia un picco centrale leggermente più schiacciato.
         Inoltre nelle code delle curve è evidente come il rumore di fondo diminuisca notevolmente, in particolar modo nel set di dati con il sensore a $\qty{1.0}{\mm}$. Questo potrebbe essere dovuto alla riduzione della luce che entra nel sensore o al cambio di fondo-scala, che porta ad una corrente di buio notevolmente inferiore. %? review: ha senso confrontare il rumore DOPO aver scalato i valori delle intensità?
         %* è probabile che sia un po' "banale" come considerazione, alla fine se scali il set contenente il rumore, giustamente il rumore subisce lo stesso cambio di scala, però conoscendo la vetri magari vuole lo stesso il commento, fa brodo
         Come sarà possibile vedere in seguito la seconda ipotesi è quella che più si adatta ai dati raccolti.} %! quantificare di quanto si stringe il picco
     \label{fig:sensore 0.02}
 \end{figure}
 
-Si può notare che anche nel grafico \ref{fig:sensore 0.02} persiste il segnale parassita: questo potrebbe essere dato da un difetto della fenditura stessa, che causa un'interferenza la quale si sovrappone alla figura di diffrazione.
-
+Dalla \autoref{fig:sensore 0.02} si evince che anche nel set con apertura \qty{1.0}{\mm} persiste il segnale parassita: questo potrebbe essere dato da un difetto della fenditura stessa, che causa un'interferenza la quale si sovrappone alla figura di diffrazione.
 
 \end{document}
