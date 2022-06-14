@@ -25,12 +25,12 @@ Sovrapponendo i set si è proceduto ad individuare la posizione dei minimi attri
 
 \begin{table}[ht!]
     \centering
-    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.08}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per l'errore $\delta a$ sono stati sommati in quadratura i contributi di $\delta y$ e $\delta L$, così facendo il contributo di $\delta L$ risulta essere trascurabile.}
+    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.08}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per l'errore $\delta a$ sono stati sommati in quadratura i contributi di $\delta y$ e $\delta L$; anche qui il contributo di $\delta L$ risulta essere trascurabile.}
     \import{../tables/}{mins_0.08.tex}
     \label{tab:minimi 0.08}
 \end{table}
 
-Intersecando le barre d'errore dei valori ottenuti si ha $a_g = \qty{0.084+-0.005}{\mm}$ che risulta compatibile con il valore teorico.
+Intersecando le barre d'errore dei valori ottenuti si ha $a_g = \qty{0.084+-0.005}{\mm}$, risultante compatibile con il valore teorico.
 
 \newpage
 
@@ -46,6 +46,7 @@ Successivamente si è proceduto con il fit utilizzando l'\autoref{eq:fit} e otte
 Entrambi $a_g$ e $a_f$ risultano compatibili con il valore teorico di $a = \qty{0.08}{\mm}$.
 
 Per confrontare le misure ottenute con diverse aperture del sensore si è scelto di utilizzare il set $1$ delle misure con apertura $\qty{1.5}{\mm}$, in quanto presenta una variazione trascurabile dell'intensità massima. %? review: si può trovare un motivo migliore (tipo: il secondo set ha un picco orribile)
+%* potresti mettere esattamente quella motivazione ma scritta in modo più professionale, e.g. (scritto un po' a minchia, prendi solo il succo della cosa) "... in quanto il picco del primo set è quello che permette un miglior confronto" un po' come hai scritto nella fenditura 04
 Dopo aver scalato le intensità dei set utilizzati in modo che il valore massimo di $I$ risultasse pari ad $1$ per tutti i set, essi sono stati riportati sovrapposti in \autoref{fig:sensore 0.08}.
 
 \begin{figure}[ht!]
@@ -53,6 +54,7 @@ Dopo aver scalato le intensità dei set utilizzati in modo che il valore massimo
     \includegraphics{sensor_0.08.png}
     \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) per ciascuna delle due aperture del sensore.
         Tutti i set sono stati misurati con il fondoscala intermedio (\textit{lampadina}). I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$, questo permette di confrontare i picchi con più semplicità.
+        %* non so se ignorare la ripetizione del "picchi scalati a 1" o dirti che è strana da leggere subito dopo quello che c'è scritto immediatamente sopra la figure, ma vabbè, solita ripetizione "obbligatoria"?
         Per quanto il set effettuato con un'apertura pari a \qty{0.5}{\mm} abbia un picco centrale leggermente più stretto rispetto agli altri due, una relazione simile non può essere individuata confrontando i set a \qty{1.5}{\mm} e \qty{1.0}{\mm}. In conclusione non è possibile estrapolare una relazione tra la dimensione dell'apertura e la larghezza del picco centrale.}
     \label{fig:sensore 0.08}
 \end{figure}

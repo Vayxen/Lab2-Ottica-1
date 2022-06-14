@@ -21,14 +21,15 @@ Sovrapponendo i set si è proceduto ad individuare la posizione dei minimi attri
 \begin{figure}[ht!]
     \centering
     \includegraphics{min_0.04.png}
-    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a \qty{0.04}{\mm}. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare come i picchi laterali presentino varie deformazioni da cui non è tuttavia possibile individuare un senale sovrapposto come nel caso della fenditura da \qty{0.02}{\mm}, piuttosto si è ipotizzato che ciò dipenda dalla variazione del rumore di fondo. %? review: davvero... dal rumore di fondo?
+    \caption{Intensità luminosa $I$ in funzione della posizione $y$ del sensore (in metri) per la fenditura a \qty{0.04}{\mm}. In figura sono segnati i minimi ricavati graficamente con i relativi errori. È possibile notare come i picchi laterali presentino varie deformazioni da cui non è tuttavia possibile individuare un segnale sovrapposto come nel caso della fenditura da \qty{0.02}{\mm}; si è invece ipotizzato che ciò dipenda dalla variazione del rumore di fondo. %? review: davvero... dal rumore di fondo?
+    %* se stavolta non è il segnale parassita, o è davvero il rumore che ha fatto wooooooooooooooooooooooo per nessun motivo, oppure mi son perso del sarcasmo e ti stai in modo molto subdolo giustificando per aver mosso il sensore con la mano ferma di un alcolizzato, il che è ragionevole e lo farei anche io onestamente
     } % todo: aggiungere qualcosa in più alla descrizione
     \label{fig:minimi 0.04}
 \end{figure}
 
 \begin{table}[ht!]
     \centering
-    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.04}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per l'errore $\delta a$ sono stati sommati in quadratura i contributi di $\delta y$ e $\delta L$, così facendo il contributo di $\delta L$ risulta essere trascurabile.}
+    \caption{Posizione dei minimi, ottenuta graficamente dalla \autoref{fig:minimi 0.04}, riportata di fianco al proprio indice $m$ ed al valore $a$ (in $\si{\mm}$) stimato seguendo la relazione esposta in \autoref{eq:y=0 values}. Il valore di $a$ derivato da ciascun minimo è stato ricavato ponendo $\lambda = \qty{650}{\nm}$ ed $L = \qty{98.5+-0.1}{\cm}$, per l'errore $\delta a$ sono stati sommati in quadratura i contributi di $\delta y$ e $\delta L$, anche qui rendendo $\delta L$ pressochè trascurabile.}
     \import{../tables/}{mins_0.04.tex}
     \label{tab:minimi 0.04}
 \end{table}
@@ -41,7 +42,7 @@ Intersecando le barre d'errore dei valori ottenuti si ha $a_g = \qty{0.043+-0.00
 
 \newpage
 
-Successivamente si è proceduto con il fit utilizzando l'\autoref{eq:fit} e ottenendo un valore della fenditura $a_f = \qty{0.044+-0.005}{\mm}$, il grafico del fit è riportato in \autoref{fig:fit 0.04}.
+Successivamente si è proceduto con il fit utilizzando l'\autoref{eq:fit} e ottenendo un valore della fenditura $a_f = \qty{0.044+-0.005}{\mm}$. Il grafico del fit è riportato in \autoref{fig:fit 0.04}.
 
 \begin{figure}[ht!]
     \centering
@@ -60,8 +61,8 @@ Per confrontare le misure ottenute con diverse aperture del sensore si è scelto
     \centering
     \includegraphics{sensor_0.04.png}
     \caption{Grafico dell'intensità luminosa relativa $I$ in funzione della posizione $y$ (in metri) per ciascuna delle due aperture del sensore.
-    Tutti i set sono stati misurati con il fondoscala intermedio (\textit{lampadina}). I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$, questo permette di confrontare i picchi con più semplicità.
-    Non è possibile evidenziare alcuna correlazione tra l'ampiezza del sensore e la larghezza del picco centrale} % todo: inserire un commento sul rumore? O non ha senso visto che le intensità sono scalate?
+    Tutti i set sono stati misurati con il fondoscala intermedio (\textit{lampadina}). I valori delle intensità sono stati scalati in modo che l'altezza del picco centrale fosse pari a $1$, permettendo di confrontare i picchi con più semplicità.
+    Non è possibile evidenziare alcuna correlazione tra l'ampiezza del sensore e la larghezza del picco centrale.} % todo: inserire un commento sul rumore? O non ha senso visto che le intensità sono scalate?
     \label{fig:sensore 0.04}
 \end{figure}
 
